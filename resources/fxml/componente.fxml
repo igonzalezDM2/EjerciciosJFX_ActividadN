@@ -1,18 +1,37 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Label?>
-<?import javafx.scene.control.TextField?>
-<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
 
-
-<HBox alignment="CENTER" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="62.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1">
+<fx:root maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="101.0" prefWidth="611.0" stylesheets="@../css/estilos.css" type="GridPane" xmlns="http://javafx.com/javafx/20.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.ProductoLabelController">
+  <columnConstraints>
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="191.81848153335193" minWidth="10.0" prefWidth="129.5458374783778" />
+    <ColumnConstraints hgrow="SOMETIMES" maxWidth="364.54681424096736" minWidth="10.0" prefWidth="332.819324037006" />
+      <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.54577645522687" minWidth="10.0" prefWidth="136.45504159114535" />
+  </columnConstraints>
+  <rowConstraints>
+    <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+  </rowConstraints>
    <children>
-      <Label alignment="CENTER_RIGHT" minWidth="-Infinity" prefWidth="100.0">
-         <HBox.margin>
-            <Insets right="10.0" />
-         </HBox.margin>
+      <ImageView fx:id="imagenProductoImageView" fitHeight="111.0" fitWidth="212.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../imagenes/trigo.png" />
+         </image>
+      </ImageView>
+      <Label fx:id="nombreProductoLabel" prefHeight="62.0" prefWidth="374.0" text="Trigo" GridPane.columnIndex="1">
+         <font>
+            <Font size="50.0" />
+         </font>
       </Label>
-      <TextField HBox.hgrow="ALWAYS" />
+      <Label fx:id="stockProductoLabel" alignment="CENTER_RIGHT" prefHeight="64.0" prefWidth="130.0" text="25" GridPane.columnIndex="2">
+         <font>
+            <Font size="50.0" />
+         </font>
+      </Label>
    </children>
-</HBox>
+</fx:root>
